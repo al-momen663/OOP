@@ -6,16 +6,15 @@ public class Student {
     public double result;
     public String section;
 
-    public Student(String name, int id, double result, String section) {
-        this.name = name;
-        this.id = id;
-        this.result = result;
-        this.section = section;
+    public Student() {
+        // A default constructor
+
     }
 
-    public void storeInfo(String name, int id, double result, String section) {
+    /* creating a store info public method ans passing the pearmeter of name
+     result and section*/
+    public void storeInfo(String name, double result, String section) {
         this.name = name;
-        this.id = id;
         this.result = result;
         this.section = section;
     }
@@ -30,15 +29,24 @@ public class Student {
 
     public void showInfo() {
         System.out.println("Student Name: " + name);
-        System.out.println("Student ID: " + id);
+        System.out.println("Student ID: " + getId());
         System.out.println("Student Result: " + result);
         System.out.println("Student Section: " + section);
     }
 
     public static void main(String[] args) {
-        Student student1 = new Student("Eva", 1153, 3.92, "A");
-        Student student2 = new Student("Momen", 1154, 3.68, "A");
+        Student student1 = new Student();
+        Student student2 = new Student();
 
+        // store info in reference of object
+        student1.storeInfo("Eva", 3.92, "A");
+        student1.setId(1153);
+
+        student2.storeInfo("Momen", 3.68, "A");
+        student2.setId(1154);
+
+
+        // show output in reference of object and method
         student1.showInfo();
         student2.showInfo();
     }
