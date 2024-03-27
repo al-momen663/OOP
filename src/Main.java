@@ -11,6 +11,8 @@ public class Main {
         person1.setAge(age);
         System.out.println("Person1 Name is: "+person1.getName());
         System.out.println("Person1 Age is: "+person1.getAge());
+
+
     }
 }
 

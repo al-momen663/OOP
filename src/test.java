@@ -7,6 +7,10 @@ public class test{
         System.out.println("Double value "+d2);
         System.out.println("Integer value "+i2);
 
+
+
+
+
     }
 }
 /*
